@@ -1,0 +1,16 @@
+compatible: "steppers"
+description: "Device tree node representing a stepper"
+
+child-binding:
+  description: Stepper child node
+  properties:
+    dir-gpios:
+      type: phandle-array
+      required: true
+    step-gpios:
+      type: phandle-array
+      required: true
+    enable-gpios:
+      type: phandle-array
+      required: true
+

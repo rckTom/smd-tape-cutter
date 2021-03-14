@@ -1,0 +1,17 @@
+/ {
+    steppers {
+        compatible = "steppers";
+
+        stepper_cutter: stepper_cutter {
+            enable-gpios = <&gpioa 10 0>;
+            dir-gpios = <&gpiob 3 0>;
+            step-gpios = <&gpiob 5 0>;
+        };
+
+        stepper_mover: stepper_mover {
+            enable-gpios = <&gpiob 4 0>;
+            dir-gpios = <&gpiob 10 0>;
+            step-gpios = <&gpioa 8 0>;
+        };
+    };
+};
