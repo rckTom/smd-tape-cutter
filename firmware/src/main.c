@@ -11,14 +11,7 @@
  */
 
 #include <zephyr.h>
-#include <device.h>
-#include <devicetree.h>
-#include <drivers/gpio.h>
 #include <logging/log.h>
-#include <math.h>
-#include <stdio.h>
-#include <shell/shell.h>
-#include "stepper.h"
 #include "zerhacker.h"
 
 LOG_MODULE_REGISTER(zerhacker, CONFIG_LOG_DEFAULT_LEVEL);
