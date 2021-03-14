@@ -40,8 +40,15 @@ struct stepper stepper_2 = {
 
 void cut()
 {
-	cutter_down();
-	cutter_up();
+
+	int64_t d1 = abs(-10 - stepper_1.cur_pos);
+	int64_t d2 = abs(-460 - stepper_1.cur_pos);
+
+	if (d1 > d2) {
+		stepper_move(&stepper_1, -10);
+	} else {
+		stepper_move(&stepper_1, -460);
+	}
 }
 
 void cutter_down()
@@ -51,7 +58,14 @@ void cutter_down()
 
 void cutter_up()
 {
+	int64_t d1 = abs(-10 - stepper_1.cur_pos);
+	int64_t d2 = abs(-460 - stepper_1.cur_pos);
+
+	if (d1 > d2) {
+		stepper_move(&stepper_1, -460);
+	} else {
 	stepper_move(&stepper_1, -10);
+	}
 }
 
 void home_cutter()
